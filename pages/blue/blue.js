@@ -611,6 +611,13 @@ Page({
     })
   },
 
+  addEquip: function (e) {
+    let url = `/pages/bind/bind`
+    wx.navigateTo({
+      url: url
+    })
+  },
+
   onReady: function () {
 
   },

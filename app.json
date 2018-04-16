@@ -7,7 +7,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/ucenter/ucenter",
-    "pages/myhistory/myhistory"
+    "pages/myhistory/myhistory",
+    "pages/equipList/equipList"
   ],
   "window": {
     "backgroundTextStyle": "light",
