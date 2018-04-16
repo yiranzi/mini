@@ -19,14 +19,14 @@
       {
         "pagePath": "pages/show/show",
         "text": "健康数据",
-        "iconPath": "/static/img/icon.png",
-        "selectedIconPath": "/static/img/icon.png"
+        "iconPath": "/static/img/icon_health.png",
+        "selectedIconPath": "/static/img/icon_health_activate.png"
       },
       {
         "pagePath": "pages/blue/blue",
         "text": "个人信息",
-        "iconPath": "/static/img/icon.png",
-        "selectedIconPath": "/static/img/icon.png"
+        "iconPath": "/static/img/icon_my.png",
+        "selectedIconPath": "/static/img/icon_my_activate.png"
       }
     ]
   }

@@ -15,16 +15,26 @@ Page({
         time: '',
         equipAttrArr: [
           {
+            attrName: '睡眠时间',
+            attrValue: '',
+            attrUnit: '暂无数据',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_sleep.png'
+          },
+          {
             attrName: '呼吸',
             attrValue: -1,
+            attrUnit: '次/分'
           },
           {
             attrName: '心率',
             attrValue: -1,
+            attrUnit: '次/分钟',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_heart.png'
           },
           {
             attrName: '体动次数',
             attrValue: -1,
+            attrUnit: '次'
           },
         ],
         status: '',
@@ -34,8 +44,10 @@ Page({
         time: '',
         equipAttrArr: [
           {
-            attrName: '血糖指标',
+            attrName: '血糖',
             attrValue: -1,
+            attrUnit: '毫摩/升',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_sugar.png'
           }
         ],
         status: 2,
@@ -47,10 +59,14 @@ Page({
           {
             attrName: '心率',
             attrValue: -1,
+            attrUnit: '次/分钟',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_heart.png'
           },
           {
             attrName: '步数',
             attrValue: -1,
+            attrUnit: '次/分钟',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_step.png'
           }
         ],
         status: 2,
@@ -73,9 +89,9 @@ Page({
         }
         var {date, isbed, heart ,resp ,turn} = data
         equip.time = (new Date(date)).toLocaleString()
-        equip.equipAttrArr[0].attrValue = resp
-        equip.equipAttrArr[1].attrValue = heart
-        equip.equipAttrArr[2].attrValue = turn
+        equip.equipAttrArr[1].attrValue = resp
+        equip.equipAttrArr[2].attrValue = heart
+        equip.equipAttrArr[3].attrValue = turn
         equip.status = stausArr[isbed]
         break;
       case 'glu':
