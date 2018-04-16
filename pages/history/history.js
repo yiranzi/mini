@@ -16,6 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: '历史数据'
+    })
     // 初始化
     // 1 拉下来实时数据。 每隔一段时间拉一次
     let equipIndex = parseInt(options.equipIndex)

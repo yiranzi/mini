@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: {},
     array: [1,2,3],
     equipList: [
       {
@@ -143,6 +144,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.setNavigationBarColor({
+      frontColor:'#ffffff',
+      backgroundColor:'#ed5629'
+    })
+    wx.setNavigationBarTitle({
+      title: '九和堂云健康平台'
+    })
     getApp().globalCbfFunc.userInfoCbf = this.update
   },
 
@@ -222,6 +230,7 @@ Page({
     this.getJhData(0)
     this.getGluData()
     this.getWatchData()
+    this.getUserInfo()
     // 2 这个页面拉取数据包。并进行渲染
     // 2 上报这数据。给服务器。并且计算出来心率数据的平均值。。？或者有一个表存放当日实时数值。。有个表存放历史平均值
     // 3 历史页面拉取历史全部数据。。。然后绘制？
@@ -234,6 +243,37 @@ Page({
     if (this.readyStatus) {
       this.update()
     }
+  },
+
+  getUserInfo: function () {
+    ajax.getUserInfo().then((res) => {
+      let data = res.data.data
+      console.log(data)
+      if (data.name) {
+        this.setData({
+          userInfo: data,
+        })
+      } else {
+        // 发起注册请求
+        ajax.newUserSign().then((res) => {
+          let data = res.data.data
+          if (data) {
+            this.setData({
+              userInfo: data
+            })
+          }
+        })
+      }
+      console.log(res)
+    })
+  },
+
+  addEquip: function () {
+    console.log('123123')
+    let url = `/pages/blue/blue`
+    wx.navigateTo({
+      url: url
+    })
   },
 
   /**

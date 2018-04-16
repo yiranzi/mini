@@ -1,18 +1,44 @@
 // pages/bind/bind.js
+var ajax = require('../../ajax/ajax');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    content: 'hehehe'
+  },
+
+  // 输入框组件回调
+  inputCbf: function (event) {
+    this.setData({
+      content: event.detail.value
+    })
+  },
+
+  enter: function () {
+    console.log(this.data.content)
+    ajax.newEquipBind(this.data.content).then((res) => {
+      console.log(res)
+      wx.showModal({
+        title: '设备绑定成功',
+        content: '设备ID为： ' + this.data.content,
+      })
+    })
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.setNavigationBarColor({
+      frontColor:'#ffffff',
+      backgroundColor:'#ed5629'
+    })
+    wx.setNavigationBarTitle({
+      title: '添加设备'
+    })
   },
 
   /**

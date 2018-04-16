@@ -26,5 +26,6 @@
                 </view>
             </view>
     </view>
+    <view bindtap="addEquip">手动添加设备</view>
 </view>
 

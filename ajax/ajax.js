@@ -56,7 +56,7 @@ const getUserInfo = () => {
     // 拉取数据
     var that = this
     qcloud.request({
-      url: `${config.service.host}/weapp/userinfo`,
+      url: `${config.service.host}/weapp/userInfoMini`,
       data: util.getUserId({}),
       login: false,
       success (result) {
@@ -78,8 +78,30 @@ const newUserSign = () => {
     // 拉取数据
     var that = this
     qcloud.request({
-      url: `${config.service.host}/weapp/newUserSign`,
+      url: `${config.service.host}/weapp/newUserSignMini`,
       data: util.getUserId({name: getApp().globalData.userInfo.nickName}),
+      login: false,
+      success (result) {
+        util.showSuccess('请求成功完成')
+        reslove(result)
+      },
+      fail (error) {
+        util.showModel('请求失败', error);
+        console.log('request fail', error);
+        reject (false)
+      }
+    })
+  })
+}
+
+const newEquipBind = (equipId) => {
+  util.showBusy('请求中...')
+  return new Promise((reslove, reject) => {
+    // 拉取数据
+    var that = this
+    qcloud.request({
+      url: `${config.service.host}/weapp/newEquipBind`,
+      data: util.getUserId({equipId: equipId}),
       login: false,
       success (result) {
         util.showSuccess('请求成功完成')
@@ -339,4 +361,4 @@ const postWatchData = (data) => {
   })
 }
 
-module.exports = { postWatchData, getWatchData, getGluData, postGluData, getJHHistoryData, getJHData, testCgi, postNewJob, finishTodayJob, getUserInfo, getMileToneList, postMileTone, getJobList, newUserSign, getStockHistory }
+module.exports = { newEquipBind, postWatchData, getWatchData, getGluData, postGluData, getJHHistoryData, getJHData, testCgi, postNewJob, finishTodayJob, getUserInfo, getMileToneList, postMileTone, getJobList, newUserSign, getStockHistory }

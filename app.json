@@ -1,11 +1,13 @@
 {
   "pages": [
     "pages/show/show",
+    "pages/bind/bind",
     "pages/blue/blue",
     "pages/history/history",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/bind/bind"
+    "pages/ucenter/ucenter",
+    "pages/myhistory/myhistory"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,7 +25,7 @@
         "selectedIconPath": "/static/img/icon_health_activate.png"
       },
       {
-        "pagePath": "pages/blue/blue",
+        "pagePath": "pages/ucenter/ucenter",
         "text": "个人信息",
         "iconPath": "/static/img/icon_my.png",
         "selectedIconPath": "/static/img/icon_my_activate.png"

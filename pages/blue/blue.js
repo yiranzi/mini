@@ -114,7 +114,12 @@ Page({
     })
   },
 
-
+  bindEquip: function () {
+    let url = `/pages/bind/bind`
+    wx.navigateTo({
+      url: url
+    })
+  },
 
 // 获取已连接的设备
   getConnectedBlueDevices: function () {
@@ -597,6 +602,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.setNavigationBarColor({
+      frontColor:'#ffffff',
+      backgroundColor:'#ed5629'
+    })
+    wx.setNavigationBarTitle({
+      title: '获取设备数据'
+    })
   },
 
   onReady: function () {
