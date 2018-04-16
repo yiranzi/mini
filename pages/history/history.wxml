@@ -4,6 +4,9 @@
     <view class="list">
         <view class="title">{{data.OutBedTime}}睡眠记录</view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon'>
+              <image style="width: 40px; height: 40px;" src="https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_sleep.png"></image>
+            </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
                     <view class='strong'>效率</view>
