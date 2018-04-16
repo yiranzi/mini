@@ -66,7 +66,7 @@ Page({
           {
             attrName: '步数',
             attrValue: -1,
-            attrUnit: '次/分钟',
+            attrUnit: '步',
             icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_step.png'
           }
         ],

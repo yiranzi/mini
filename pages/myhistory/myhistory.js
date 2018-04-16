@@ -18,12 +18,6 @@ Page({
             attrUnit: '暂无数据',
             icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_sleep.png'
           },
-          {
-            attrName: '心率',
-            attrValue: -1,
-            attrUnit: '次/分钟',
-            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_heart.png'
-          },
         ],
         status: '',
       },
