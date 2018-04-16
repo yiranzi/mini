@@ -48,6 +48,13 @@ Page({
     }
   },
 
+  enterEquipList: function () {
+    let url = `/pages/equipList/equipList`
+    wx.navigateTo({
+      url: url
+    })
+  },
+
   enterHistory: function () {
     let url = `/pages/myhistory/myhistory`
     wx.navigateTo({

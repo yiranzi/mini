@@ -75,6 +75,17 @@ Page({
     })
   },
 
+  viewhistory: function (e) {
+    console.log(e)
+    let {equip, attr} = e.currentTarget.dataset
+    // 1获得数据
+    let url = `/pages/history/history?equipIndex=${equip}&attrIndex=${attr}`
+    wx.navigateTo({
+      url: url
+    })
+    // 2渲染
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

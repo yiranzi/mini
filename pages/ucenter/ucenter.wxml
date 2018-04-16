@@ -1,7 +1,7 @@
 <view>{{userInfo.nickName}}</view>
 
 <view class="weui-cell weui-cell_access">
-    <view class="weui-cell__bd">我的设备</view>
+    <view class="weui-cell__bd" bindtap="enterEquipList">我的设备</view>
 </view>
 <view class="weui-cell weui-cell_access">
     <view class="weui-cell__bd" bindtap="enterHistory">历史数据</view>
