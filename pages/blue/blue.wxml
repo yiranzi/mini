@@ -1,0 +1,30 @@
+<!--pages/blue/blue.wxml-->
+<view>
+    <view>蓝牙适配器状态： {{blueReady}}</view>
+    <view>蓝牙状态： {{blueStatus}}</view>
+    <view>蓝牙搜索状态： {{blueDiscovering}}</view>
+    <view>
+
+        <image style="width: 20px; height: 20px;" src="{{icons['icon_data']}}"></image>
+        <image style="width: 20px; height: 20px;" src="{{icons['icon_addequip']}}"></image>
+        <view class="margin-middle">
+            <view class="global-flex" wx:if="{{!blueDiscovering}}">
+                <icon size="60"type="info"></icon>
+                <view>蓝牙未正常，请重试</view>
+            </view>
+            <view wx:else class="global-flex">
+                <image style="width: 60px; height: 60px;" src="{{icons['icon_scan']}}"></image>
+                <view>正在搜索设备，请稍等</view>
+            </view>
+        </view>
+
+            <view wx:for="{{myDeviceList}}" wx:for-item="device" class="weui-cell weui-cell_access" bindtap="tapConnectDevice" id="{{device.deviceId}}">
+                <view class="weui-cell__bd">{{device.equipName}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+                    <view style="display: inline-block;vertical-align:middle; font-size: 17px;">{{nameStatus[device.connectStatus]}}</view>
+                    <view wx:if="{{device.connectStatus === 2}}" class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+                </view>
+            </view>
+    </view>
+</view>
+

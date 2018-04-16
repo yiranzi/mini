@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/show/show",
+    "pages/blue/blue",
+    "pages/history/history",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [{
+      "pagePath": "pages/show/show",
+      "text": "健康数据",
+      "iconPath": "/static/img/icon.png",
+      "selectedIconPath": "/static/img/icon.png"
+    },{
+      "pagePath": "pages/blue/blue",
+      "text": "个人信息",
+      "iconPath": "/static/img/icon.png",
+      "selectedIconPath": "/static/img/icon.png"
+    }]
+  }
+}

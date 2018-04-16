@@ -1,0 +1,105 @@
+<view class='a2'>today Info:{{equipIndex}}</view>
+
+<view wx:if="{{equipIndex === 0}}" wx:for="{{list}}" wx:for-item="data" wx:for-index="index" wx:key="{{index}}">
+    <view class="list">
+        <view class="title">{{data.OutBedTime}}睡眠记录</view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>效率</view>
+                    <view>{{data.SleepEfficiency}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>入睡</view>
+                    <view>{{data.OnBedTime}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>时长</view>
+                    <view>{{data.SleepDuration}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>心跳</view>
+                    <view>{{data.HeartRateAvgt}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>翻身</view>
+                    <view>{{data.TurnTimes}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>离床次数</view>
+                    <view>{{data.OutBedTimes}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{equipIndex === 1}}" wx:for="{{list}}" wx:for-item="data" wx:for-index="index" wx:key="{{index}}">
+    <view class="list">
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>日期</view>
+                    <view>{{data.time}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>血糖</view>
+                    <view>{{data.value}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{equipIndex === 2}}" wx:for="{{list}}" wx:for-item="data" wx:for-index="index" wx:key="{{index}}">
+    <view class="list">
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>时间</view>
+                    <view>{{data.time}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>步数</view>
+                    <view>{{data.walk}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view class='attr-info'>
+                    <view class='strong'>心率</view>
+                    <view>{{data.heart}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

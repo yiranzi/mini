@@ -1,0 +1,64 @@
+<!--pages/blue/blue.wxml-->
+<view>
+
+<button bindtap="onTapSearch" class="weui-btn"type="primary">搜索附近设备</button>
+
+
+    <view>蓝牙适配器状态： {{blueReady}}</view>
+    <view>蓝牙状态： {{blueStatus}}</view>
+    <view>蓝牙搜索状态： {{blueDiscovering}}</view>
+    <view catchtap="tapOnDiscover">打开搜索</view>
+    <view catchtap="tapOffDiscover">关闭搜索</view>
+    <view catchtap="getBlueDevices">获取设备</view>
+    <view catchtap="getConnectedBlueDevices">获取已经连接设备</view>
+
+    <view>已连接设备</view>
+    <view wx:for="{{haveConnectDevice}}" wx:for-item="deviceId">
+        <view>deviceId: {{deviceId}}</view>
+    </view>
+
+    <view>已经成功连接的设备</view>
+    <view wx:for="{{deviceList}}" wx:for-item="device">
+    <view>========={{device.deviceId}}=========</view>
+        <view wx:for="{{device.services}}" wx:for-item="service">
+            <view>------{{service.serviceId}}------</view>
+            <view wx:for="{{service.characteristics}}" wx:for-item="character">
+                <view bindtap="tapWithUUID" data-deviceid="{{device.deviceId}}" data-serviceid="{{service.serviceId}}" data-uuid="{{character.uuid}}" >{{character.uuid}}</view>
+            </view>
+        </view>
+        <view>deviceId: {{device.deviceId}}</view>
+    </view>
+
+    <view bindtap="tapWithUUID" data-deviceid="{{123}}" data-serviceid="{{456}}" data-uuid="{{789}}" >test</view>
+
+
+
+    <view>设备列表</view>
+    <view wx:for="{{discoverList}}" wx:for-item="device">
+        <view>--------------index: {{index}}--------------</view>
+        <view>name: {{device.name}}</view>
+        <view>deviceId: {{device.deviceId}}</view>
+        <view>advertisData: {{device.advertisData}}</view>
+        <view bindtap="tapConnectDevice" id="{{device.deviceId}}">开始连接</view>
+        <view>--------------</view>
+    </view>
+
+
+
+    <view class='line'>
+                <view class='icon'>icon</view>
+                <view class='attr-info'>
+                    <view>{{attr.attrName}}</view>
+                    <view>{{attr.attrValue}}</view>
+                </view>
+                <view class='equip-info'>
+                    <view class='status'>
+                        <view>来源：{{equip.equipTitle}}</view>
+                        <view wx:if="{{equip.status}}">（{{equip.status}}）</view>
+                    </view>
+                    <view>{{equip.time}}</view>
+                </view>
+                <view >》</view>
+            </view>
+
+</view>

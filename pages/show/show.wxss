@@ -1,0 +1,28 @@
+.line {
+    display: flex;
+    color: red;
+    justify-content: space-between;
+}
+
+.icon {
+    margin-right: 25px;
+}
+
+.attr-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.equip-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.status {
+    display: flex;
+}
+
+.equip-list {
+    border-bottom: 1px solid gray;
+}
