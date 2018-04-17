@@ -9,7 +9,7 @@
             </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='main-font-color'>效率</view>
+                    <view class='main-font-color'>睡眠效率</view>
                     <view class='flex'><view class='equip-value'>{{data.SleepEfficiency}}</view> <view class='font-size-12 value-unit'>分</view></view>
                 </view>
             </view>
@@ -21,7 +21,7 @@
             <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='main-font-color'>入睡</view>
+                    <view class='main-font-color'>入睡时间</view>
                     <view class='equip-value'>{{data.OnBedTime}}</view>
                 </view>
             </view>
@@ -33,7 +33,7 @@
             <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='main-font-color'>时长</view>
+                    <view class='main-font-color'>睡眠时长</view>
                     <view class='flex'><view class='equip-value'>{{data.SleepDuration}}</view> <view class='font-size-12 value-unit'>分钟</view></view>
                 </view>
             </view>
@@ -57,7 +57,7 @@
             <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='main-font-color'>翻身</view>
+                    <view class='main-font-color'>体动次数</view>
                     <view class='flex'><view class='equip-value'>{{data.TurnTimes}}</view> <view class='font-size-12 value-unit'>次</view></view>
                 </view>
             </view>
