@@ -1,1 +1,10 @@
-/* pages/ucenter/ucenter.wxss */
+.top-bar {
+    line-height: 60px;
+    height: 60px;
+    padding: 0 15px;
+}
+
+.username {
+    font-weight: bold;
+    flex: 2;
+}

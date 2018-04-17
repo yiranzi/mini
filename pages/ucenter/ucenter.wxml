@@ -1,5 +1,6 @@
-<view>{{userInfo.nickName}}</view>
-
+<view class='flex top-bar'>
+    <view class='username font-size-20'>{{userInfo.nickName}}</view>
+</view>
 <view class="weui-cell weui-cell_access">
     <view class="weui-cell__bd" bindtap="enterEquipList">我的设备</view>
 </view>

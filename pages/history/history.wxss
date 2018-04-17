@@ -44,3 +44,7 @@
     color: red;
     font-size: 22px;
 }
+
+.weui-cell_access {
+    position: inherit;
+}
