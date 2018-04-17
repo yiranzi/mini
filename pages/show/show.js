@@ -199,18 +199,22 @@ Page({
 
   getGluData: function () {
     ajax.getGluData().then(res => {
-      if (res) {
+      if (res && res.data && res.data.data) {
         let result = res.data.data
-        this.setAttrData('glu', result[result.length - 1])
+        if (result.length > 0) {
+          this.setAttrData('glu', result[result.length - 1])
+        }
       }
     })
   },
 
   getWatchData: function () {
     ajax.getWatchData().then(res => {
-      if (res) {
+      if (res && res.data && res.data.data) {
         let result = res.data.data
-        this.setAttrData('watch', result[result.length - 1])
+        if (result.length > 0) {
+          this.setAttrData('watch', result[result.length - 1])
+        }
       }
     })
   },
