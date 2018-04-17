@@ -284,16 +284,6 @@ Page({
     if (this.timer) {
       clearTimeout(this.timer)
     }
-    ajax.postWatchData({
-      imei: (util.getUserId({}))['open_id'],
-      time: new Date(),
-      value: 102,
-      type: 'heart'
-    })
-    // ajax.postGluData({
-    //   time: new Date(),
-    //   value: '113mml'
-    // })
   },
 
   /**
