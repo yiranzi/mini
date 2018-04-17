@@ -13,17 +13,17 @@ var host = ''
 // 2 已更新
 equipInfo.equipList = [
   {
-    deviceId: '33994AB7',
-    macId: 'A2:C1:16:00:06:02',
+    deviceId: 'A2:C1:16:00:06:02',
+    macId: '33994AB7',
     equipName: '血糖仪',
     characterId: '2A18',
     connectStatus: -1,
     value: undefined,
   },
   {
-    deviceId: '33994AB6',
+    deviceId: '3C:A3:08:90:11:E3',
     equipName: '血压计',
-    characterId: '2A18',
+    characterId: 'FFF4',
     connectStatus: -1,
     value: undefined,
   },

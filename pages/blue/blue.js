@@ -1,6 +1,6 @@
 // pages/blue/blue.js
 var equipInfo = require('../../data/equipInfo')
-var util = require('../../utils/util')
+var ajax = require('../../ajax/ajax')
 var icons = require('../../static/icons')
 Page({
 
@@ -520,7 +520,7 @@ Page({
   },
 
   startConnect: function (device, index) {
-    this.startConnectDeviceProcess(device.deviceId).then(() => {
+    this.startConnectDeviceProcess(device).then(() => {
       device.connectStatus = 1
       this.data.myDeviceList[index] = device
       this.setData({
@@ -531,10 +531,10 @@ Page({
     })
   },
 
-  startConnectDeviceProcess: function (deviceId) {
+  startConnectDeviceProcess: function (device) {
     return new Promise((resolve, reject) => {
       // 1 开始连接
-      this.createBLEConnection(deviceId).then((result) => {
+      this.createBLEConnection(device.deviceId).then((result) => {
         if (result.status) {
           // 2 获取service
           this.getBLEDeviceServices(result.deviceId).then((info) => {
@@ -547,7 +547,7 @@ Page({
                   this.getBLEDeviceCharacteristics(result.deviceId, service.uuid).then((characteristics) => {
                     // 如果是特征值。监听
                     characteristics.characteristics.forEach((character, index) => {
-                      if (character.uuid.indexOf('2A18') !== -1) {
+                      if (character.uuid.indexOf(device.characterId) !== -1) {
                         console.log('get 2a18')
                         this.notifyBLECharacteristicValueChange({
                           deviceId: result.deviceId,
@@ -586,11 +586,11 @@ Page({
       findDevice.connectStatus = 2
       wx.showModal({
         title: '获得新数据' + findDevice.value,
-        content: '血糖值113',
+        content: findDevice.value,
       })
       ajax.postGluData({
         time: new Date(),
-        value: '113mml'
+        value: findDevice.value
       })
       this.setData({
         myDeviceList: this.data.myDeviceList
@@ -631,13 +631,14 @@ Page({
     if (this.timer) {
       clearTimeout(this.timer)
     }
+    wx.stopBluetoothDevicesDiscovery()
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    wx.stopBluetoothDevicesDiscovery()
   },
 
   /**
