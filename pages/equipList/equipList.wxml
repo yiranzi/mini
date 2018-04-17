@@ -1,2 +1,13 @@
-<!--pages/equipList/equipList.wxml-->
-<text>pages/equipList/equipList.wxml</text>
+<view class='a2'>{{userInfo.name}}</view>
+<view class="equip-list" wx:for="{{equipList}}" wx:for-item="equip" wx:for-index="equipIndex" wx:key="{{equipIndex}}">
+    <view class="weui-cell weui-cell_access" wx:for="{{equip.equipAttrArr}}" wx:for-item="attr" wx:for-index="attrIndex" wx:key="{{attrIndex}}">
+        <view class='icon'>
+          <image style="width: 40px; height: 40px;" src="{{attr.icon}}"></image>
+        </view>
+        <view class="weui-cell__bd">
+            <view class='attr-info'>
+                <view class='main-font-color'>{{attr.attrName}}</view>
+            </view>
+        </view>
+    </view>
+</view>

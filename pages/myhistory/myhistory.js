@@ -5,7 +5,55 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    userInfo: {},
+    array: [1,2,3],
+    equipList: [
+      {
+        equipTitle: '智能床垫',
+        time: '',
+        equipAttrArr: [
+          {
+            attrName: '睡眠时间',
+            attrValue: '',
+            attrUnit: '暂无数据',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_sleep.png'
+          },
+        ],
+        status: '',
+      },
+      {
+        equipTitle: '血糖仪',
+        time: '',
+        equipAttrArr: [
+          {
+            attrName: '血糖',
+            attrValue: -1,
+            attrUnit: '毫摩/升',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_sugar.png'
+          }
+        ],
+        status: 2,
+      },
+      {
+        equipTitle: '智能手表',
+        time: '',
+        equipAttrArr: [
+          {
+            attrName: '心率',
+            attrValue: -1,
+            attrUnit: '次/分钟',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_heart.png'
+          },
+          {
+            attrName: '步数',
+            attrValue: -1,
+            attrUnit: '次/分钟',
+            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_step.png'
+          }
+        ],
+        status: 2,
+      },
+    ]
   },
 
   /**
@@ -19,6 +67,17 @@ Page({
     wx.setNavigationBarTitle({
       title: '历史健康数据'
     })
+  },
+
+  viewhistory: function (e) {
+    console.log(e)
+    let {equip, attr} = e.currentTarget.dataset
+    // 1获得数据
+    let url = `/pages/history/history?equipIndex=${equip}&attrIndex=${attr}`
+    wx.navigateTo({
+      url: url
+    })
+    // 2渲染
   },
 
   /**

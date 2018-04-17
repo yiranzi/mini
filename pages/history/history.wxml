@@ -2,53 +2,79 @@
 
 <view wx:if="{{equipIndex === 0}}" wx:for="{{list}}" wx:for-item="data" wx:for-index="index" wx:key="{{index}}">
     <view class="list">
-        <view class="title">{{data.OutBedTime}}睡眠记录</view>
+        <view class="title">{{data.OutBedTime}} 睡眠记录</view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon'>
+              <image style="width: 40px; height: 40px;" src="https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_sleep.png"></image>
+            </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>效率</view>
-                    <view>{{data.SleepEfficiency}}</view>
+                    <view class='main-font-color'>效率</view>
+                    <view class='flex'><view class='equip-value'>{{data.SleepEfficiency}}</view> <view class='font-size-12 value-unit'>分</view></view>
                 </view>
+            </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>入睡</view>
-                    <view>{{data.OnBedTime}}</view>
+                    <view class='main-font-color'>入睡</view>
+                    <view class='equip-value'>{{data.OnBedTime}}</view>
                 </view>
+            </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>时长</view>
-                    <view>{{data.SleepDuration}}</view>
+                    <view class='main-font-color'>时长</view>
+                    <view class='flex'><view class='equip-value'>{{data.SleepDuration}}</view> <view class='font-size-12 value-unit'>分钟</view></view>
                 </view>
+            </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>心跳</view>
-                    <view>{{data.HeartRateAvgt}}</view>
+                    <view class='main-font-color'>心跳</view>
+                    <view class='flex'><view class='equip-value'>{{data.HeartRateAvgt}}</view> <view class='font-size-12 value-unit'>次/分</view></view>
                 </view>
+            </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>翻身</view>
-                    <view>{{data.TurnTimes}}</view>
+                    <view class='main-font-color'>翻身</view>
+                    <view class='flex'><view class='equip-value'>{{data.TurnTimes}}</view> <view class='font-size-12 value-unit'>次</view></view>
                 </view>
+            </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>离床次数</view>
-                    <view>{{data.OutBedTimes}}</view>
+                    <view class='main-font-color'>离床次数</view>
+                    <view class='flex'><view class='equip-value'>{{data.OutBedTimes}}</view> <view class='font-size-12 value-unit'>次</view></view>
                 </view>
+            </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
     </view>
@@ -56,20 +82,19 @@
 
 <view wx:if="{{equipIndex === 1}}" wx:for="{{list}}" wx:for-item="data" wx:for-index="index" wx:key="{{index}}">
     <view class="list">
+        <view class="title">{{data.time}} 指标</view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon'>
+              <image style="width: 40px; height: 40px;" src="https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_sugar.png"></image>
+            </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>日期</view>
-                    <view>{{data.time}}</view>
+                    <view class='main-font-color'>血糖</view>
+                    <view class='flex'><view class='equip-value'>{{data.value != null ? data.value : '暂无数据'}}</view> <view class='font-size-12 value-unit' wx:if="{{data.value != null}}">毫摩/升</view></view>
                 </view>
             </view>
-        </view>
-        <view class="weui-cell weui-cell_access">
-            <view class="weui-cell__bd">
-                <view class='attr-info'>
-                    <view class='strong'>血糖</view>
-                    <view>{{data.value}}</view>
-                </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
     </view>
@@ -77,28 +102,33 @@
 
 <view wx:if="{{equipIndex === 2}}" wx:for="{{list}}" wx:for-item="data" wx:for-index="index" wx:key="{{index}}">
     <view class="list">
+        <view class="title">{{data.time}} 指标</view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon'>
+              <image style="width: 40px; height: 40px;" src="https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_step.png"></image>
+            </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>时间</view>
-                    <view>{{data.time}}</view>
+                    <view class='main-font-color'>步数</view>
+                    <view class='flex'><view class='equip-value'>{{data.walk != null ? data.walk : '暂无数据'}}</view> <view class='font-size-12 value-unit' wx:if="{{data.walk != null}}">步</view></view>
                 </view>
+            </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
         <view class="weui-cell weui-cell_access">
+            <view class='icon'>
+              <image style="width: 40px; height: 40px;" src="https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_heart.png"></image>
+            </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>步数</view>
-                    <view>{{data.walk}}</view>
+                    <view class='main-font-color'>心率</view>
+                    <view class='flex'><view class='equip-value'>{{data.heart != null ? data.heart : '暂无数据'}}</view> <view class='font-size-12 value-unit' wx:if="{{data.heart != null}}">次/分钟</view></view>
                 </view>
             </view>
-        </view>
-        <view class="weui-cell weui-cell_access">
-            <view class="weui-cell__bd">
-                <view class='attr-info'>
-                    <view class='strong'>心率</view>
-                    <view>{{data.heart}}</view>
-                </view>
+            <view class="weui-cell__ft font-size-12">
+                来源：{{data.equipTitle}}
             </view>
         </view>
     </view>

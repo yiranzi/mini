@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    content: 'hehehe'
+    content: ''
   },
 
   // 输入框组件回调

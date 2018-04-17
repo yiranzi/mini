@@ -53,6 +53,7 @@ Page({
       let result = res.data.data
       result.map((item) => {
         item.time = (new Date(item.time)).toLocaleString()
+        item.equipTitle = '血糖仪'
       })
       this.setData({
         list: result
@@ -65,6 +66,7 @@ Page({
       let result = res.data.data
       result.map((item) => {
         item.time = (new Date(item.time)).toLocaleString()
+        item.equipTitle = '智能手表'
       })
       this.setData({
         list: result
@@ -75,6 +77,9 @@ Page({
   getJhData: function () {
     let json = {openId: 'o0f3l0fmMIV4LKsOjLPsfn8sYgEs', orders: '', pageCurrent: 1, pageSize: 5}
     ajax.getJHHistoryData(json).then((res) => {
+      res.data.data.list.map((item) => {
+        item.equipTitle = '智能床垫'
+      })
       this.setData({
         list: res.data.data.list
       })
