@@ -1,1 +1,11 @@
-/* pages/bind/bind.wxss */
+.title {
+    margin: 40px 0 15px 0;
+    color: #333;
+}
+
+.add-iemi {
+    background:transparent !important;
+    border:none !important;
+    color: #ed5629 !important;
+    position: inherit !important;
+}

@@ -20,6 +20,25 @@
     line-height: 28px;
 }
 
+.top-bar {
+    line-height: 60px;
+    height: 60px;
+    padding: 0 15px;
+}
+
+.username {
+    font-weight: bold;
+    flex: 2;
+}
+
+.add-equip {
+    flex: 0.;
+}
+
+.add-equip-txt {
+    margin-left: 5px;
+}
+
 .status {
     display: flex;
 }

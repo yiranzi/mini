@@ -9,8 +9,8 @@
             </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>效率</view>
-                    <view class='font-size-16 equip-value flex'>{{data.SleepEfficiency}} <view class='font-size-12 value-unit'>分</view></view>
+                    <view class='main-font-color'>效率</view>
+                    <view class='flex'><view class='equip-value'>{{data.SleepEfficiency}}</view> <view class='font-size-12 value-unit'>分</view></view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">
@@ -21,8 +21,8 @@
             <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>入睡</view>
-                    <view class='font-size-16 equip-value'>{{data.OnBedTime}}</view>
+                    <view class='main-font-color'>入睡</view>
+                    <view class='equip-value'>{{data.OnBedTime}}</view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">
@@ -33,8 +33,8 @@
             <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>时长</view>
-                    <view class='font-size-16 equip-value flex'>{{data.SleepDuration}} <view class='font-size-12 value-unit'>分钟</view></view>
+                    <view class='main-font-color'>时长</view>
+                    <view class='flex'><view class='equip-value'>{{data.SleepDuration}}</view> <view class='font-size-12 value-unit'>分钟</view></view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">
@@ -45,8 +45,8 @@
             <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>心跳</view>
-                    <view class='font-size-16 equip-value flex'>{{data.HeartRateAvgt}} <view class='font-size-12 value-unit'>次/分</view></view>
+                    <view class='main-font-color'>心跳</view>
+                    <view class='flex'><view class='equip-value'>{{data.HeartRateAvgt}}</view> <view class='font-size-12 value-unit'>次/分</view></view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">
@@ -57,8 +57,8 @@
             <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>翻身</view>
-                    <view class='font-size-16 equip-value flex'>{{data.TurnTimes}} <view class='font-size-12 value-unit'>次</view></view>
+                    <view class='main-font-color'>翻身</view>
+                    <view class='flex'><view class='equip-value'>{{data.TurnTimes}}</view> <view class='font-size-12 value-unit'>次</view></view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">
@@ -69,8 +69,8 @@
             <view class='icon' style='width: 40px;'></view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>离床次数</view>
-                    <view class='font-size-16 equip-value flex'>{{data.OutBedTimes}} <view class='font-size-12 value-unit'>次</view></view>
+                    <view class='main-font-color'>离床次数</view>
+                    <view class='flex'><view class='equip-value'>{{data.OutBedTimes}}</view> <view class='font-size-12 value-unit'>次</view></view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">
@@ -89,8 +89,8 @@
             </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>血糖</view>
-                    <view class='font-size-16 equip-value flex'>{{data.value != null ? data.value : '暂无数据'}} <view class='font-size-12 value-unit' wx:if="{{data.value != null}}">毫摩/升</view></view>
+                    <view class='main-font-color'>血糖</view>
+                    <view class='flex'><view class='equip-value'>{{data.value != null ? data.value : '暂无数据'}}</view> <view class='font-size-12 value-unit' wx:if="{{data.value != null}}">毫摩/升</view></view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">
@@ -109,8 +109,8 @@
             </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>步数</view>
-                    <view class='font-size-16 equip-value flex'>{{data.walk != null ? data.walk : '暂无数据'}} <view class='font-size-12 value-unit' wx:if="{{data.walk != null}}">步</view></view>
+                    <view class='main-font-color'>步数</view>
+                    <view class='flex'><view class='equip-value'>{{data.walk != null ? data.walk : '暂无数据'}}</view> <view class='font-size-12 value-unit' wx:if="{{data.walk != null}}">步</view></view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">
@@ -123,8 +123,8 @@
             </view>
             <view class="weui-cell__bd">
                 <view class='attr-info'>
-                    <view class='strong'>心率</view>
-                    <view class='font-size-16 equip-value flex'>{{data.heart != null ? data.heart : '暂无数据'}} <view class='font-size-12 value-unit' wx:if="{{data.heart != null}}">次/分钟</view></view>
+                    <view class='main-font-color'>心率</view>
+                    <view class='flex'><view class='equip-value'>{{data.heart != null ? data.heart : '暂无数据'}}</view> <view class='font-size-12 value-unit' wx:if="{{data.heart != null}}">次/分钟</view></view>
                 </view>
             </view>
             <view class="weui-cell__ft font-size-12">

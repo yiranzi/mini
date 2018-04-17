@@ -8,3 +8,7 @@
 .margin-middle {
     margin: 80px;
 }
+
+.add-equip {
+    margin: 15px 0;
+}
