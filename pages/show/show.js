@@ -149,7 +149,7 @@ Page({
       backgroundColor:'#ed5629'
     })
     wx.setNavigationBarTitle({
-      title: '九和堂云健康平台'
+      title: '云健康平台'
     })
     getApp().globalCbfFunc.userInfoCbf = this.update
   },

@@ -1,10 +1,6 @@
 <!--pages/blue/blue.wxml-->
 <view>
-    <view>蓝牙适配器状态： {{blueReady}}</view>
-    <view>蓝牙状态： {{blueStatus}}</view>
-    <view>蓝牙搜索状态： {{blueDiscovering}}</view>
     <view>
-
         <image style="width: 20px; height: 20px;" src="{{icons['icon_data']}}"></image>
         <image style="width: 20px; height: 20px;" src="{{icons['icon_addequip']}}"></image>
         <view class="margin-middle">
@@ -13,7 +9,7 @@
                 <view>蓝牙未正常，请重试</view>
             </view>
             <view wx:else class="global-flex">
-                <image style="width: 60px; height: 60px;" src="{{icons['icon_scan']}}"></image>
+                <image style="width: 60px; height: 60px;" src="https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/icon_scan.png"></image>
                 <view>正在搜索设备，请稍等</view>
             </view>
         </view>

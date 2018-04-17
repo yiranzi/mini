@@ -1,5 +1,3 @@
-<view class='a2'>today Info:{{equipIndex}}</view>
-
 <view wx:if="{{equipIndex === 0}}" wx:for="{{list}}" wx:for-item="data" wx:for-index="index" wx:key="{{index}}">
     <view class="list">
         <view class="title">{{data.OutBedTime}} 睡眠记录</view>
