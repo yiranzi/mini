@@ -27,10 +27,9 @@ Page({
             attrUnit: '次/分'
           },
           {
-            attrName: '心率',
+            attrName: '心跳',
             attrValue: -1,
             attrUnit: '次/分钟',
-            icon: 'https://jiuhetang-1256506523.cos.ap-chengdu.myqcloud.com/attr_heart.png'
           },
           {
             attrName: '体动次数',
